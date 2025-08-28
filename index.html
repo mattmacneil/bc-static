@@ -4,6 +4,7 @@
 		<title>Bay Constructive Works</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="format-detection" content="telephone=no">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<meta name="robots" content="noindex, nofollow">
@@ -20,6 +21,7 @@
 				<!-- One -->
 					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
 						<div class="content">
+							<img class="hero-logo" src="images/temp-logo.png" alt="Bay Constructive Logo" />
 							<h1>We are Bay Constructive.</h1>
 							<!-- <p class="major">We provide expert building services, tailored real estate solutions, and seamless property management in the SF Bay Area.</p> -->
 							<!-- <p class="major">We provide integrated construction services and tailored real estate solutions. Our XXX guide projects from planning to completion with clarity and efficiency.</p> -->
@@ -27,7 +29,7 @@
 							<p>Our specialists, versed in the nuances of the SF Bay Area market, manage projects and property ventures from start to finish with a client-focused approach.</p>
 							<ul class="actions stacked">
 								<li><a href="#contactform" class="button primary big fit small icon solid smooth-scroll-middle fa-envelope">Send us a message</a></li>
-								<li class="stacked-pad-top"><a href="tel:+14154126083" class="button primary big fit small icon solid smooth-scroll-middle fa-mobile-alt">Ring 415-412-6083</a></li>
+								<li class="stacked-pad-top"><a href="" class="button primary big fit small icon solid smooth-scroll-middle fa-mobile-alt" id="phonehref">Ring <span id="button-phone"></a></li>
 							</ul>
 						</div>
 						<div class="image">
@@ -190,9 +192,10 @@
 				<!-- Footer -->
 					<footer class="wrapper color1 invert style1 align-center">
 						<div class="inner">
+							<img class="hero-logo" src="images/temp-logo.png" alt="Bay Constructive Logo" />
 							<p>&copy; K&M Construction d/b/a Bay Constructive Works</p>
 							<p>828 San Pablo Ave Unit 101<br />Albany, CA 94706</p>
-							<p>team@bayconstructive.com<br />Tel: 415-412-6083</p>
+							<p>team@bayconstructive.com<br />Tel: <span class="no-tel" id="footer-phone"></span></p>
 							<p class="style1"><a href="https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1107481" target="_blank">CSLB License #1107481</a></p>
 						</div>
 					</footer>
@@ -207,6 +210,26 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+			const parts = ["4","1","5","-","4","1","2","-","6","0","8","3"];
+			const phoneHref = "tel:+1" + parts.join("").replace(/-/g,"");
+
+			function setPhone(el, prefix = "") {
+			el.textContent = prefix;
+			parts.forEach(digit => {
+				const span = document.createElement("span");
+				span.textContent = digit;
+				el.appendChild(span);
+			});
+			}
+
+			const phoneLink = document.getElementById("phonehref");
+			phoneLink.href = phoneHref;
+			setPhone(phoneLink, "Ring ");
+
+			setPhone(document.getElementById("footer-phone"));
+			setPhone(document.getElementById("button-phone"));
+			</script>
 
 	</body>
 </html>

@@ -12,3 +12,34 @@ textarea::placeholder {
 .hero-margin-bottom {
     margin-bottom: 1rem !important;
 }
+
+.hero-logo {
+    width: 2.25rem;
+    margin-bottom: 1rem;
+
+    @include breakpoint('<=large') {
+        margin: 0 auto;
+        margin-bottom: 1rem;
+    }
+}
+
+footer {
+    font-size: 70%;
+
+    .inner {
+        padding-top: 4rem !important;
+        padding-bottom: 3rem !important;
+    }
+}
+
+span.no-tel {
+    color: inherit;          /* keeps your normal text color */
+    text-decoration: none;   /* removes underline */
+    -webkit-touch-callout: none; /* disables callout menu on long press */
+}
+
+  a#phonehref {
+    color: inherit;
+    text-decoration: none;
+    -webkit-touch-callout: none; /* disables callout menu */
+  }
