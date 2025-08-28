@@ -55,16 +55,33 @@
 						</div>
 					</section>
 				-->
-					<section class="spotlight style2 orient-right content-align-left image-position-center onscroll-image-fade-in">
+					<section class="spotlight style2 orient-left content-align-left image-position-center onscroll-image-fade-in">
 						<div class="content">
-							<h2>Pharetra etiam nulla</h2>
+							<h2>Workshop Division</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
-							<ul class="actions stacked">
-								<li><a href="#" class="button">Learn More</a></li>
-							</ul>
+							<ul class="alt">
+												<li>Construction project management</li>
+												<li>Skilled crew staffing & contractor sourcing</li>
+												<li>Design Consultation</li>
+											</ul>
 						</div>
 						<div class="image">
-							<img src="images/spotlight03.jpg" alt="" />
+							<img src="images/workshop1.jpg" alt="" />
+						</div>
+					</section>
+
+					<section class="spotlight style2 orient-left content-align-left image-position-center onscroll-image-fade-in">
+						<div class="content">
+							<h2>Realty Division</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
+							<ul class="alt">
+												<li>Construction project management</li>
+												<li>Skilled crew staffing and oversight</li>
+												<li>Porttitor sem non integer</li>
+											</ul>
+						</div>
+						<div class="image">
+							<img src="images/realty.jpg" alt="" />
 						</div>
 					</section>
 
@@ -96,6 +113,7 @@
     <div class="inner medium">
         <h2>Get in touch</h2>
         <form method="POST" action="https://formspree.io/f/mdklkbwy">
+			<input type="hidden" name="_subject" value="Bay Constructive Form Submission - ({name})">
             <div class="fields">
                 <div class="field half">
                     <label for="name">Name</label>
@@ -105,13 +123,25 @@
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email" required />
                 </div>
+                <div class="field half">
+                    <label for="phone">Phone (optional)</label>
+                    <input type="text" name="phone" id="phone" placeholder="(123) 456-7890" />
+                </div>
+                <div class="field half">
+                    <label for="division">Division</label>
+                    <select name="division" id="division">
+                        <option value="">Not sure / Other</option>
+                        <option value="Workshop Division">Workshop Division</option>
+                        <option value="Realty Division">Realty Division</option>
+                    </select>
+                </div>
                 <div class="field">
                     <label for="message">Your Message / Project Details</label>
                     <textarea name="message" id="message" rows="6" required></textarea>
                 </div>
             </div>
             <ul class="actions special">
-                <li><input type="submit" class="button primary" value="Send Message" /></li>
+                <li><input type="submit" value="Send Message" /></li>
             </ul>
         </form>
         <div id="form-success" style="display:none; margin-top:1em; padding:1em; background-color:#d4edda; color:#155724; border-radius:4px;">
@@ -119,6 +149,15 @@
         </div>
     </div>
 </section>
+
+<style>
+input::placeholder,
+textarea::placeholder {
+  color: #bbb !important;      /* placeholder text color */
+  font-style: italic;  /* optional: italicize */
+  opacity: 1;          /* some browsers default to 0.5 opacity */
+}
+</style>
 
 <script>
   const form = document.querySelector("form");
@@ -147,8 +186,9 @@
 
 
 
+
 				<!-- Footer -->
-					<footer class="wrapper color1 style1 align-center">
+					<footer class="wrapper color1 invert style1 align-center">
 						<div class="inner">
 							<p>&copy; 2025 Bay Constructive Works</p>
 							<p class="style1">CSLB License <a href="https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1107481" target="_blank">#1107481</a></p>
