@@ -23,9 +23,11 @@
 							<h1>We are Bay Constructive.</h1>
 							<!-- <p class="major">We provide expert building services, tailored real estate solutions, and seamless property management in the SF Bay Area.</p> -->
 							<!-- <p class="major">We provide integrated construction services and tailored real estate solutions. Our XXX guide projects from planning to completion with clarity and efficiency.</p> -->
-							<p class="majorxx">We provide integrated construction services and tailored real estate services. Our specialists, versed in the nuances of the SF Bay Area market, manage projects and property ventures from start to finish with a client-focused approach.</p>
+							<p class="hero-margin-bottom">We provide integrated construction services and tailored real estate services.</p>
+							<p>Our specialists, versed in the nuances of the SF Bay Area market, manage projects and property ventures from start to finish with a client-focused approach.</p>
 							<ul class="actions stacked">
-								<li><a href="tel:+14154126083" class="button big wide smooth-scroll-middle">Call Us: (415) 412-6083</a></li>
+								<li><a href="#contactform" class="button primary big fit small icon solid smooth-scroll-middle fa-paper-plane">Send us a message</a></li>
+								<li class="stacked-pad-top"><a href="tel:+14154126083" class="button primary big fit small icon solid smooth-scroll-middle fa-mobile-alt">Ring 415-412-6083</a></li>
 							</ul>
 						</div>
 						<div class="image">
@@ -115,69 +117,69 @@
 				-->
 
 				<!-- Seven -->
-<section class="wrapper style2">
-    <div class="inner medium">
-        <h2>Get in touch</h2>
-        <form method="POST" action="https://formspree.io/f/mdklkbwy">
-			<input type="hidden" name="_subject" value="Bay Constructive Form Submission - ({name})">
-            <div class="fields">
-                <div class="field half">
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="name" required />
-                </div>
-                <div class="field half">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" required />
-                </div>
-                <div class="field half">
-                    <label for="phone">Phone (optional)</label>
-                    <input type="text" name="phone" id="phone" placeholder="(123) 456-7890" />
-                </div>
-                <div class="field half">
-                    <label for="division">Division</label>
-                    <select name="division" id="division">
-                        <option value="">Not sure / Other</option>
-                        <option value="Workshop Division">Workshop Division</option>
-                        <option value="Realty Division">Realty Division</option>
-                    </select>
-                </div>
-                <div class="field">
-                    <label for="message">Your Message / Project Details</label>
-                    <textarea name="message" id="message" rows="6" required></textarea>
-                </div>
-            </div>
-            <ul class="actions special">
-                <li><input type="submit" value="Send Message" /></li>
-            </ul>
-        </form>
-        <div id="form-success" style="display:none; margin-top:1em; padding:1em; background-color:#d4edda; color:#155724; border-radius:4px;">
-            Thanks for your message! We’ll be in touch soon.
-        </div>
-    </div>
-</section>
+				<section class="wrapper style2" id="contactform">
+					<div class="inner medium">
+						<h2>Get in touch</h2>
+						<form method="POST" action="https://formspree.io/f/mdklkbwy">
+							<input type="hidden" name="_subject" value="Bay Constructive Form Submission - ({name})">
+							<div class="fields">
+								<div class="field half">
+									<label for="name">Name</label>
+									<input type="text" name="name" id="name" required />
+								</div>
+								<div class="field half">
+									<label for="email">Email</label>
+									<input type="email" name="email" id="email" required />
+								</div>
+								<div class="field half">
+									<label for="phone">Phone (optional)</label>
+									<input type="text" name="phone" id="phone" placeholder="(123) 456-7890" />
+								</div>
+								<div class="field half">
+									<label for="division">Division</label>
+									<select name="division" id="division">
+										<option value="">Not sure / Other</option>
+										<option value="Workshop Division">Workshop Division</option>
+										<option value="Realty Division">Realty Division</option>
+									</select>
+								</div>
+								<div class="field">
+									<label for="message">Your Message / Project Details</label>
+									<textarea name="message" id="message" rows="6" required></textarea>
+								</div>
+							</div>
+							<ul class="actions special">
+								<li><input type="submit" value="Send Message" /></li>
+							</ul>
+						</form>
+						<div id="form-success" style="display:none; margin-top:1em; padding:1em; background-color:#d4edda; color:#155724; border-radius:4px;">
+							Thanks for your message! We’ll be in touch soon.
+						</div>
+					</div>
+				</section>
 
-<script>
-  const form = document.querySelector("form");
-  const successMsg = document.getElementById("form-success");
+				<script>
+				const form = document.querySelector("form");
+				const successMsg = document.getElementById("form-success");
 
-  form.addEventListener("submit", function(e) {
-    e.preventDefault();
-    const formData = new FormData(form);
-    
-    fetch(form.action, {
-      method: form.method,
-      body: formData,
-      headers: { 'Accept': 'application/json' }
-    }).then(response => {
-      if (response.ok) {
-        form.style.display = "none";
-        successMsg.style.display = "block";
-      } else {
-        alert("Oops! There was a problem submitting your form.");
-      }
-    }).catch(() => alert("Oops! There was a problem submitting your form."));
-  });
-</script>
+				form.addEventListener("submit", function(e) {
+					e.preventDefault();
+					const formData = new FormData(form);
+					
+					fetch(form.action, {
+					method: form.method,
+					body: formData,
+					headers: { 'Accept': 'application/json' }
+					}).then(response => {
+					if (response.ok) {
+						form.style.display = "none";
+						successMsg.style.display = "block";
+					} else {
+						alert("Oops! There was a problem submitting your form.");
+					}
+					}).catch(() => alert("Oops! There was a problem submitting your form."));
+				});
+				</script>
 
 
 
