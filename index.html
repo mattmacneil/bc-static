@@ -31,7 +31,7 @@
 							<p>Our specialists, versed in the nuances of the SF Bay Area market, manage projects and property ventures from start to finish with a client-focused approach.</p>
 							<ul class="actions stacked">
 								<li><a href="#contactform" class="button primary big fit icon solid smooth-scroll-middle fa-envelope">Send us a message</a></li>
-								<li class="stacked-pad-top"><a href="" class="button primary big fit icon solid smooth-scroll-middle fa-mobile-alt" id="phonehref">Ring <span id="button-phone"></a></li>
+								<li class="stacked-pad-top"><a href="" class="button primary big fit icon solid smooth-scroll-middle fa-mobile-alt" id="phonehref">Ring <span id="button-phone"></span></a></li>
 							</ul>
 						</div>
 						<div class="image">
@@ -211,7 +211,7 @@
 							<img class="hero-logo" src="images/temp-logo.png" alt="Bay Constructive Logo" />
 							<p>&copy;2025 Bay Constructive Works</p>
 							<p>828 San Pablo Ave Unit 101<br />Albany, CA 94706</p>
-							<p>team@bayconstructive.com<br />Tel: <span class="no-tel" id="footer-phone"></span></p>
+							<p><span id="footer-mail"></span><br />Tel: <span class="no-tel" id="footer-phone"></span></p>
 							<p class="style1"><a href="https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1107481" target="_blank">CSLB License #1107481</a></p>
 						</div>
 					</footer>
@@ -227,16 +227,17 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script>
+			// Tel
 			const parts = ["4","1","5","-","4","1","2","-","6","0","8","3"];
 			const phoneHref = "tel:+1" + parts.join("").replace(/-/g,"");
 
 			function setPhone(el, prefix = "") {
-			el.textContent = prefix;
-			parts.forEach(digit => {
+				el.textContent = prefix;
+				parts.forEach(digit => {
 				const span = document.createElement("span");
 				span.textContent = digit;
 				el.appendChild(span);
-			});
+				});
 			}
 
 			const phoneLink = document.getElementById("phonehref");
@@ -247,5 +248,21 @@
 			setPhone(document.getElementById("button-phone"));
 			</script>
 
+			<script>
+			// Mail
+			const u = ['c','o','n','n','e','c','t'];
+			const d = ['b','a','y','c','o','n','s','t','r','u','c','t','i','v','e'];
+			const t = ['c','o','m'];
+
+			const email = `${u.join('')}@${d.join('')}.${t.join('')}`;
+
+			const el = document.getElementById('footer-mail');
+			if (el) {
+				const a = document.createElement('a');
+				a.href = `mailto:${email}`;
+				a.textContent = email;
+				el.replaceChildren(a);
+			}
+			</script>
 	</body>
 </html>
