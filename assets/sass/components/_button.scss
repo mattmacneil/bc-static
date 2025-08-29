@@ -6,6 +6,8 @@
 
 /* Button */
 
+	$button-size: 3.25em;
+
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
@@ -28,9 +30,9 @@
 		white-space: nowrap;
 		font-size: 0.75rem;
 		max-width: 20rem;
-		height: 3.75em;
-		line-height: 3.75em;
-		border-radius: 3.75em;
+		height: $button-size;
+		line-height: $button-size;
+		border-radius: $button-size;
 		padding: 0 2.5em;
 		text-overflow: ellipsis;
 		overflow: hidden;
