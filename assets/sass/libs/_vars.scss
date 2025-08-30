@@ -47,6 +47,7 @@
 	);
 
 // Palette.
+	$off-white: #fafaf7;
 	$palette: (
 		color1:				#202020,
 		color2:				#db8992,
@@ -56,7 +57,7 @@
 		color6:				#64abb4,
 		color7:				#6ba78c,
 
-		bg:					#ffffff,
+		bg:					$off-white,
 		bg-alt:				#f4f2f2,
 		fg:					#000000,
 		fg-bold:			#2a0f0f,
@@ -69,9 +70,9 @@
 		invert: (
 			bg:				#000000,
 			bg-alt:			#222222,
-			fg:				#ffffff,
-			fg-bold:		#ffffff,
-			fg-light:		#ffffff,
+			fg:				$off-white,
+			fg-bold:		$off-white,
+			fg-light:		$off-white,
 			border:			rgba(255,255,255,1.0),
 			border-alt:		rgba(255,255,255,0.125),
 			border-bg:		rgba(255,255,255,0.125),
