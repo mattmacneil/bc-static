@@ -31,9 +31,16 @@
 		color: _palette(fg);
 	}
 
-	body, input, select, textarea {
+	body {
 		font-family: _font(family);
 		font-size: 1rem;
+		font-weight: _font(weight);
+		line-height: 1.65;
+	}
+
+	input, select, textarea {
+		font-family: _font(family);
+		font-size: .75rem;
 		font-weight: _font(weight);
 		line-height: 1.65;
 	}

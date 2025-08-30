@@ -71,8 +71,8 @@
 	label {
 		display: block;
 		font-size: 0.9rem;
-		font-weight: _font(weight-bold);
-		margin: 0 0 (_size(element-margin) * 0.5) 0;
+		// font-weight: _font(weight-bold);
+		margin: 0 0 (_size(element-margin) * 0.25) 0;
 	}
 
 	input[type="text"],
@@ -134,7 +134,7 @@
 	}
 
 	input[type="checkbox"],
-	input[type="radio"], {
+	input[type="radio"] {
 		@include vendor('appearance', 'none');
 		display: block;
 		float: left;
@@ -241,7 +241,7 @@
 		}
 
 		input[type="checkbox"],
-		input[type="radio"], {
+		input[type="radio"] {
 			& + label {
 				color: _palette($p, fg);
 
